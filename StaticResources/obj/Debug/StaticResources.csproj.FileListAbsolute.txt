@@ -1,0 +1,20 @@
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\bin\Debug\StaticResources.dll
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\bin\Debug\StaticResources.pdb
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\bin\Debug\en\StaticResources.resources.dll
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\obj\Debug\StaticResources.Resources.resources
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\obj\Debug\StaticResources.Resources.en.resources
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\obj\Debug\StaticResources.csproj.GenerateResource.Cache
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\obj\Debug\en\StaticResources.resources.dll
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\obj\Debug\StaticResources.dll
+C:\Users\ToanBN\Documents\Visual Studio 2015\Projects\OnlineShop\StaticResources\obj\Debug\StaticResources.pdb
+D:\LocalBrand\StaticResources\bin\Debug\StaticResources.dll
+D:\LocalBrand\StaticResources\bin\Debug\StaticResources.pdb
+D:\LocalBrand\StaticResources\bin\Debug\en\StaticResources.resources.dll
+D:\LocalBrand\StaticResources\obj\Debug\StaticResources.csprojAssemblyReference.cache
+D:\LocalBrand\StaticResources\obj\Debug\StaticResources.Resources.resources
+D:\LocalBrand\StaticResources\obj\Debug\StaticResources.Resources.en.resources
+D:\LocalBrand\StaticResources\obj\Debug\StaticResources.csproj.GenerateResource.cache
+D:\LocalBrand\StaticResources\obj\Debug\StaticResources.csproj.CoreCompileInputs.cache
+D:\LocalBrand\StaticResources\obj\Debug\en\StaticResources.resources.dll
+D:\LocalBrand\StaticResources\obj\Debug\StaticResources.dll
+D:\LocalBrand\StaticResources\obj\Debug\StaticResources.pdb
