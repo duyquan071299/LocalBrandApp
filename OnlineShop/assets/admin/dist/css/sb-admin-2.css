@@ -256,6 +256,20 @@ table.dataTable thead .sorting:after {
     color: rgba(50,50,50,.5);
 }
 
+#imageList{
+    margin:5px;
+   
+}
+
+.groove {
+    min-height:80px;
+    border-style: groove;
+    border-color: white;
+}
+
+.image-view {
+    padding: 10px;
+}
 .btn-circle {
     width: 30px;
     height: 30px;

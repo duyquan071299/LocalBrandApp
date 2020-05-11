@@ -38,7 +38,6 @@ namespace OnlineShop.Controllers
 
         public ActionResult Login()
         {
-
             return View();
         }
         public ActionResult LoginFacebook()
@@ -115,6 +114,8 @@ namespace OnlineShop.Controllers
                     var userSession = new UserLogin();
                     userSession.UserName = user.UserName;
                     userSession.UserID = user.ID;
+                    var listCredentials = dao.GetListCredential(model.UserName);
+                    Session.Add(CommonConstants.SESSION_CREDENTIALS, listCredentials);
                     Session.Add(CommonConstants.USER_SESSION, userSession);
                     return Redirect("/");
                 }

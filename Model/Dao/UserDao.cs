@@ -45,14 +45,14 @@ namespace Model.Dao
             {
                 var user = db.Users.Find(entity.ID);
                 user.Name = entity.Name;
+                user.UserName = entity.UserName;
                 if (!string.IsNullOrEmpty(entity.Password))
                 {
                     user.Password = entity.Password;
                 }
                 user.Address = entity.Address;
                 user.Email = entity.Email;
-                user.ModifiedBy = entity.ModifiedBy;
-                user.ModifiedDate = DateTime.Now;
+                user.Phone = entity.Phone;
                 db.SaveChanges();
                 return true;
             }
@@ -63,7 +63,6 @@ namespace Model.Dao
             }
 
         }
-
         public IEnumerable<User> ListAllPaging(string searchString, int page, int pageSize)
         {
             IQueryable<User> model = db.Users;

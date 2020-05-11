@@ -18,3 +18,14 @@ D:\LocalBrand\StaticResources\obj\Debug\StaticResources.csproj.CoreCompileInputs
 D:\LocalBrand\StaticResources\obj\Debug\en\StaticResources.resources.dll
 D:\LocalBrand\StaticResources\obj\Debug\StaticResources.dll
 D:\LocalBrand\StaticResources\obj\Debug\StaticResources.pdb
+D:\LocalBrandApp\LocalBrandApp\StaticResources\bin\Debug\StaticResources.dll
+D:\LocalBrandApp\LocalBrandApp\StaticResources\bin\Debug\StaticResources.pdb
+D:\LocalBrandApp\LocalBrandApp\StaticResources\bin\Debug\en\StaticResources.resources.dll
+D:\LocalBrandApp\LocalBrandApp\StaticResources\obj\Debug\StaticResources.csprojAssemblyReference.cache
+D:\LocalBrandApp\LocalBrandApp\StaticResources\obj\Debug\StaticResources.Resources.resources
+D:\LocalBrandApp\LocalBrandApp\StaticResources\obj\Debug\StaticResources.Resources.en.resources
+D:\LocalBrandApp\LocalBrandApp\StaticResources\obj\Debug\StaticResources.csproj.GenerateResource.cache
+D:\LocalBrandApp\LocalBrandApp\StaticResources\obj\Debug\StaticResources.csproj.CoreCompileInputs.cache
+D:\LocalBrandApp\LocalBrandApp\StaticResources\obj\Debug\en\StaticResources.resources.dll
+D:\LocalBrandApp\LocalBrandApp\StaticResources\obj\Debug\StaticResources.dll
+D:\LocalBrandApp\LocalBrandApp\StaticResources\obj\Debug\StaticResources.pdb

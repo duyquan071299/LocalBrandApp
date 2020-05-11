@@ -1,5 +1,6 @@
 ﻿using Model.EF;
 using Model.ViewModel;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,44 @@ namespace Model.Dao
         {
             return db.Products.OrderByDescending(x => x.CreatedDate).Take(top).ToList();
         }
+        public bool Update(Product entity)
+        {
+            try
+            {
+                var user = db.Products.Find(entity.ID);
+                user.Name = entity.Name;
+                user.Image = entity.Image;
+                user.Price = entity.Price;
+                user.Image = entity.Image;
+                if (!string.IsNullOrEmpty(entity.Detail))
+                {
+                    user.Detail = entity.Detail;
+                }
+                user.CategoryID = entity.CategoryID;
+               
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                //logging
+                return false;
+            }
+
+        }
         public List<string> ListName(string keyword)
         {
             return db.Products.Where(x => x.Name.Contains(keyword)).Select(x => x.Name).ToList();
+        }
+        public IEnumerable<Product> ListAllPaging(string searchString, int page, int pageSize)
+        {
+            IQueryable<Product> model = db.Products;
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                model = model.Where(x => x.Name.Contains(searchString) || x.Name.Contains(searchString));
+            }
+
+            return model.OrderByDescending(x => x.CreatedDate).ToPagedList(page, pageSize);
         }
 
         /// <summary>
@@ -109,6 +145,45 @@ namespace Model.Dao
         public Product ViewDetail(long id)
         {
             return db.Products.Find(id);
+        }
+        public bool Delete(int id)
+        {
+            try
+            {
+                var product = db.Products.Find(id);
+                var productDetails = db.ProductDetails.Where(x => x.ProductID == id).ToList();
+                foreach (ProductDetail detail in productDetails)
+                {
+                    db.ProductDetails.Remove(detail);
+                }
+                db.Products.Remove(product);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
+        public bool ChangeStatus(long id)
+        {
+            var product = db.Products.Find(id);
+            product.Status = !product.Status;
+            db.SaveChanges();
+            return (bool)product.Status;
+        }
+        public long Insert(Product entity)
+        {
+            db.Products.Add(entity);
+            db.SaveChanges();
+            return entity.ID;
+        }
+        public void UpdateImages(long productId, string images)
+        {
+            var product = db.Products.Find(productId);
+            product.MoreImages = images;
+            db.SaveChanges();
         }
     }
 }

@@ -9,3 +9,9 @@ D:\LocalBrand\Common\obj\Debug\Common.csprojAssemblyReference.cache
 D:\LocalBrand\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 D:\LocalBrand\Common\obj\Debug\Common.dll
 D:\LocalBrand\Common\obj\Debug\Common.pdb
+D:\LocalBrandApp\LocalBrandApp\Common\bin\Debug\Common.dll
+D:\LocalBrandApp\LocalBrandApp\Common\bin\Debug\Common.pdb
+D:\LocalBrandApp\LocalBrandApp\Common\obj\Debug\Common.csprojAssemblyReference.cache
+D:\LocalBrandApp\LocalBrandApp\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\LocalBrandApp\LocalBrandApp\Common\obj\Debug\Common.dll
+D:\LocalBrandApp\LocalBrandApp\Common\obj\Debug\Common.pdb

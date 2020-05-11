@@ -14,10 +14,22 @@ namespace OnlineShop.Areas.Admin.Controllers
         // GET: Admin/Login
         public ActionResult Index()
         {
+            if (Session[CommonConstants.USER_SESSION] != null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
+
+        public ActionResult Logout()
+        {
+            Session[CommonConstants.USER_SESSION] = null;
+            return Redirect("/Admin");
+        }
+
         public ActionResult Login(LoginModel model)
         {
+          
             if (ModelState.IsValid)
             {
                 var dao = new UserDao();

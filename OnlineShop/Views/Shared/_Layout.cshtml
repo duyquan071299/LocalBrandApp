@@ -37,31 +37,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 @{ Html.RenderAction("HeaderCart", "Home");}
                 <script type="text/javascript">
-			function DropDown(el) {
-				this.dd = el;
-				this.initEvents();
-			}
-			DropDown.prototype = {
-				initEvents : function() {
-					var obj = this;
+                    function DropDown(el) {
+                        this.dd = el;
+                        this.initEvents();
+                    }
+                    DropDown.prototype = {
+                        initEvents: function () {
+                            var obj = this;
 
-					obj.dd.on('click', function(event){
-						$(this).toggleClass('active');
-						event.stopPropagation();
-					});
-				}
-			}
+                            obj.dd.on('click', function (event) {
+                                $(this).toggleClass('active');
+                                event.stopPropagation();
+                            });
+                        }
+                    }
 
-			$(function() {
+                    $(function () {
 
-				var dd = new DropDown( $('#dd') );
+                        var dd = new DropDown($('#dd'));
 
-				$(document).click(function() {
-					// all dropdowns
-					$('.wrapper-dropdown-2').removeClass('active');
-				});
+                        $(document).click(function () {
+                            // all dropdowns
+                            $('.wrapper-dropdown-2').removeClass('active');
+                        });
 
-			});
+                    });
 
                 </script>
                 <div class="clear"></div>
