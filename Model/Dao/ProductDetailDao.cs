@@ -57,8 +57,6 @@ namespace Model.Dao
             {
                 var detail = db.ProductDetails.Find(entity.ID);
                 detail.Color = entity.Color;
-                detail.Size = entity.Size;
-                detail.Quantity = entity.Quantity;
                 db.SaveChanges();
                 return true;
             }

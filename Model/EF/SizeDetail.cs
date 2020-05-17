@@ -6,17 +6,17 @@ namespace Model.EF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("ProductDetail")]
-    public partial class ProductDetail
+    [Table("SizeDetail")]
+    public partial class SizeDetail
     {
+       
         public long ID { get; set; }
 
-        public long ProductID { get; set; }
-
-        [Column(TypeName = "xml")]
-        public string MoreImages { get; set; }
+        public long? Quantity { get; set; }
 
         [StringLength(50)]
-        public string Color { get; set; }
+        public string Size { get; set; }
+
+        public long DetailID { get; set; }
     }
 }

@@ -9,6 +9,19 @@
 }
 @section jsFooter{
     <script src="~/assets/admin/js/controller/ProductDetailController.js"></script>
+
+    <script>
+
+        $('.btn-sizes').off('click').on("click", function (e) {
+            e.preventDefault();
+            var id = $(this).data('id');
+            var url = "Admin/Size/Index/" + id;
+            var urlWithValue = url.replace('_value', id);
+            window.location.pathname = url;
+
+        });
+    </script>
+
 }
 
 
@@ -40,8 +53,6 @@
 
                                 <th>STT</th>
                                 <th>Màu</th>
-                                <th>Size</th>
-                                <th>Số lượng</th>
                                 <th>#</th>
                             </tr>
                         </thead>
@@ -52,10 +63,8 @@
 
                                     <td>@item.ID</td>
                                     <td>@item.Color</td>
-                                    <td>@item.Size</td>
-                                    <th>@item.Quantity</th>
-
                                     <td>
+                                        <a href="#" data-id="@item.ID" class="btn btn-primary btn-sizes">Quản lý chi tiết</a>
                                         <a href="#" data-id="@item.ID" class="btn btn-primary btn-images">Quản lý ảnh</a>
 
                                         <a href="/Admin/ProductDetail/Edit/@item.ID" class="btn btn-primary">Sửa</a>
@@ -99,9 +108,9 @@
                 <div id="imageList">
 
                 </div>
-                    <div class="clear"></div>
-                    <input type="button" id="btnchooseimage" class="btn btn-primary" value="Chọn ảnh" />
-                    <input type="hidden" id="hidProductID" value="0" />
+                <div class="clear"></div>
+                <input type="button" id="btnchooseimage" class="btn btn-primary" value="Chọn ảnh" />
+                <input type="hidden" id="hidProductID" value="0" />
             </div>
 
             <!-- Modal footer -->

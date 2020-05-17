@@ -29,6 +29,7 @@ namespace Model.EF
         public virtual DbSet<ProductCategory> ProductCategories { get; set; }
         public virtual DbSet<ProductDetail> ProductDetails { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<SizeDetail> SizeDetails { get; set; }
         public virtual DbSet<Slide> Slides { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<SystemConfig> SystemConfigs { get; set; }

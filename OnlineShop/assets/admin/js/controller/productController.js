@@ -18,7 +18,6 @@
     navigateToDetail: function () {
         var id = $('#hidProductID').val();
         var url = "Admin/ProductDetail/Index/" + id;
-        //var url = '@Url.Action("ProductDetail", "Index", "_value" )';
         var urlWithValue = url.replace('_value', id);
         window.location.pathname = url;
       
