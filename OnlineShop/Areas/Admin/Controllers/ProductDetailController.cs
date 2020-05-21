@@ -7,6 +7,8 @@ using Model.EF;
 using System.Web.Mvc;
 using System.Xml.Linq;
 using System.Web.Script.Serialization;
+using System.Drawing; 
+
 
 namespace OnlineShop.Areas.Admin.Controllers
 {
@@ -129,6 +131,8 @@ namespace OnlineShop.Areas.Admin.Controllers
                 var dao = new ProductDetailDao();
 
                 product.ID = 0;
+                //Color color = (Color)ColorConverter.ConvertFromString("123123");
+
            
                 long id = dao.Insert(product);
                

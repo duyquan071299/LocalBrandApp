@@ -81,6 +81,7 @@ namespace OnlineShop.Controllers
             var product = new ProductDao().ViewDetail(id);
             ViewBag.Category = new ProductCategoryDao().ViewDetail(product.CategoryID.Value);
             ViewBag.RelatedProducts = new ProductDao().ListRelatedProducts(id);
+            ViewBag.ProductDetails = new ProductDao().ListProductDetail(id);
             return View(product);
         }
     }

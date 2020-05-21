@@ -15,3 +15,9 @@ D:\LocalBrandApp\LocalBrandApp\Common\obj\Debug\Common.csprojAssemblyReference.c
 D:\LocalBrandApp\LocalBrandApp\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 D:\LocalBrandApp\LocalBrandApp\Common\obj\Debug\Common.dll
 D:\LocalBrandApp\LocalBrandApp\Common\obj\Debug\Common.pdb
+C:\Users\thien\Desktop\LocalBrandApp\Common\bin\Debug\Common.dll
+C:\Users\thien\Desktop\LocalBrandApp\Common\bin\Debug\Common.pdb
+C:\Users\thien\Desktop\LocalBrandApp\Common\obj\Debug\Common.csprojAssemblyReference.cache
+C:\Users\thien\Desktop\LocalBrandApp\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\thien\Desktop\LocalBrandApp\Common\obj\Debug\Common.dll
+C:\Users\thien\Desktop\LocalBrandApp\Common\obj\Debug\Common.pdb
