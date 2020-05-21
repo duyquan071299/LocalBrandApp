@@ -29,3 +29,14 @@ D:\LocalBrandApp\LocalBrandApp\StaticResources\obj\Debug\StaticResources.csproj.
 D:\LocalBrandApp\LocalBrandApp\StaticResources\obj\Debug\en\StaticResources.resources.dll
 D:\LocalBrandApp\LocalBrandApp\StaticResources\obj\Debug\StaticResources.dll
 D:\LocalBrandApp\LocalBrandApp\StaticResources\obj\Debug\StaticResources.pdb
+C:\Users\thien\Desktop\LocalBrandApp\StaticResources\bin\Debug\StaticResources.dll
+C:\Users\thien\Desktop\LocalBrandApp\StaticResources\bin\Debug\StaticResources.pdb
+C:\Users\thien\Desktop\LocalBrandApp\StaticResources\bin\Debug\en\StaticResources.resources.dll
+C:\Users\thien\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.csprojAssemblyReference.cache
+C:\Users\thien\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.Resources.resources
+C:\Users\thien\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.Resources.en.resources
+C:\Users\thien\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.csproj.GenerateResource.cache
+C:\Users\thien\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.csproj.CoreCompileInputs.cache
+C:\Users\thien\Desktop\LocalBrandApp\StaticResources\obj\Debug\en\StaticResources.resources.dll
+C:\Users\thien\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.dll
+C:\Users\thien\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.pdb
