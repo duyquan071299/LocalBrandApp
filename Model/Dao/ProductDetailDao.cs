@@ -19,9 +19,6 @@ namespace Model.Dao
         public IEnumerable<ProductDetail> ListAllPaging(int id,int page, int pageSize)
         {
             IQueryable<ProductDetail> model = db.ProductDetails;
-       
-           
-      
             return model.OrderByDescending(x => x.ID).Where(x => x.ProductID == id).ToPagedList(page, pageSize);
         }
         public List<ProductDetail> ViewDetails(int id) 

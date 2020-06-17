@@ -1208,6 +1208,7 @@
     <Content Include="assets\client\css\bootstrap.min.css" />
     <Content Include="assets\client\css\font-awesome.min.css" />
     <Content Include="assets\client\css\jquery-ui.css" />
+    <Content Include="assets\client\css\style.css" />
     <Content Include="assets\client\data\Provinces_Data.xml" />
     <Content Include="assets\client\font\fontawesome-webfont.svg" />
     <Content Include="assets\client\font\glyphicons-halflings-regular.svg" />
@@ -1216,6 +1217,7 @@
     <Content Include="assets\client\js\controller\baseController.js" />
     <Content Include="assets\client\js\controller\cartController.js" />
     <Content Include="assets\client\js\controller\contactController.js" />
+    <Content Include="assets\client\js\controller\ProductDetailController.js" />
     <Content Include="assets\client\js\controller\userController.js" />
     <Content Include="assets\client\js\easing.js" />
     <Content Include="assets\client\js\easyResponsiveTabs.js" />
@@ -1227,6 +1229,7 @@
     <Content Include="assets\client\js\move-top.js" />
     <Content Include="assets\client\js\script.js" />
     <Content Include="assets\client\js\slides.min.jquery.js" />
+    <Content Include="assets\client\js\slide.js" />
     <Content Include="assets\client\js\startstop-slider.js" />
     <Content Include="assets\client\template\neworder.html" />
     <Content Include="Content\PagedList.css" />

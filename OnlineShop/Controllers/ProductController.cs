@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Xml.Linq;
 using Model.Dao;
+using Model.EF;
+using System.Web.Script.Serialization;
+using System.Drawing;
 
 namespace OnlineShop.Controllers
 {
@@ -14,6 +18,40 @@ namespace OnlineShop.Controllers
         {
             return View();
         }
+
+
+        [HttpGet]
+        public JsonResult LoadImages(long id)
+        {
+            ProductDetailDao dao = new ProductDetailDao();
+            var product = dao.ViewDetail(id);
+            var images = product.MoreImages;
+
+            XElement xImages = XElement.Parse(images);
+            List<string> listImagesReturn = new List<string>();
+
+            foreach (XElement element in xImages.Elements())
+            {
+                listImagesReturn.Add(element.Value);
+            }
+            return Json(new
+            {
+                data = listImagesReturn
+            }, JsonRequestBehavior.AllowGet);
+        }
+        public JsonResult LoadSize(long id)
+        {
+            ProductDao dao = new ProductDao();
+            var product = dao.ListSizeDetail(id);
+
+         
+            return Json(new
+            {
+                data = product
+            }, JsonRequestBehavior.AllowGet);
+           
+        }
+
 
         [ChildActionOnly]
         public PartialViewResult ProductCategory()
@@ -82,6 +120,7 @@ namespace OnlineShop.Controllers
             ViewBag.Category = new ProductCategoryDao().ViewDetail(product.CategoryID.Value);
             ViewBag.RelatedProducts = new ProductDao().ListRelatedProducts(id);
             ViewBag.ProductDetails = new ProductDao().ListProductDetail(id);
+            ViewBag.SizeDetails = new ProductDao().ListSizeDetail(id);
             return View(product);
         }
     }

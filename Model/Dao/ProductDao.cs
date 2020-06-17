@@ -104,7 +104,7 @@ namespace Model.Dao
                          join b in db.ProductCategories
                          on a.CategoryID equals b.ID
                          where a.Name.Contains(keyword)
-                         select new
+                         select new 
                          {
                              CateMetaTitle = b.MetaTitle,
                              CateName = b.Name,
@@ -140,6 +140,15 @@ namespace Model.Dao
         public List<ProductDetail> ListProductDetail(long id)
         {
             return db.ProductDetails.Where(x => x.ProductID == id).ToList();
+        }
+        public List<String> ListSizeDetail(long id)
+        {
+            var model = (from a in db.ProductDetails
+                         join b in db.SizeDetails
+                         on a.ID equals b.DetailID
+                         where b.DetailID == id
+                         select b.Size);
+            return model.ToList();
         }
         public List<ProductDetail> ListProductDetail_color(long id)
         {

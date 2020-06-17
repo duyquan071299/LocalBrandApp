@@ -1593,3 +1593,19 @@ body {
 		width:93%;
 	}
 }
+.maind {
+    font-family: Arial;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.h3-slide {
+    background: #fff;
+    color: #3498db;
+    font-size: 36px;
+    line-height: 100px;
+    margin: 10px;
+    padding: 2%;
+    text-align: center;
+}
