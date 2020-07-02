@@ -29,7 +29,7 @@ namespace Model.Dao
                 user.Name = entity.Name;
                 user.Image = entity.Image;
                 user.Price = entity.Price;
-                user.Image = entity.Image;
+                user.MetaTitle = entity.MetaTitle;
                 if (!string.IsNullOrEmpty(entity.Detail))
                 {
                     user.Detail = entity.Detail;
@@ -128,11 +128,6 @@ namespace Model.Dao
             model.OrderByDescending(x => x.CreatedDate).Skip((pageIndex - 1) * pageSize).Take(pageSize);
             return model.ToList();
         }
-        /// <summary>
-        /// List feature product
-        /// </summary>
-        /// <param name="top"></param>
-        /// <returns></returns>
         public List<Product> ListFeatureProduct(int top)
         {
             return db.Products.Where(x => x.TopHot != null && x.TopHot > DateTime.Now).OrderByDescending(x => x.CreatedDate).Take(top).ToList();
@@ -141,6 +136,25 @@ namespace Model.Dao
         {
             return db.ProductDetails.Where(x => x.ProductID == id).ToList();
         }
+        //public List<ViewSize> ListSizeDetail(long id)
+        //{
+        //    var listProducDetail = db.ProductDetails.Where(x => x.ProductID == id);
+        //    var model = (from a in listProducDetail
+        //                 join b in db.SizeDetails
+        //                 on a.ID equals b.DetailID
+        //                 select new
+        //                 {
+        //                     ID = a.ID,      
+        //                     size = b.Size,
+        //                 }).AsEnumerable().select (x => new ViewSize()
+        //                 {
+        //                     ID = a.ID,
+        //                     size = b.Size,
+        //                 }
+        //                 );
+            
+        //    return model.ToList();
+        //}
         public List<ProductDetail> ListProductDetail_color(long id)
         {
             return db.ProductDetails.Where(x => x.ProductID == id).ToList();

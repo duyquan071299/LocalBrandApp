@@ -40,3 +40,13 @@ C:\Users\thien\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.c
 C:\Users\thien\Desktop\LocalBrandApp\StaticResources\obj\Debug\en\StaticResources.resources.dll
 C:\Users\thien\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.dll
 C:\Users\thien\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.pdb
+C:\Users\Public\Desktop\LocalBrandApp\StaticResources\bin\Debug\StaticResources.dll
+C:\Users\Public\Desktop\LocalBrandApp\StaticResources\bin\Debug\StaticResources.pdb
+C:\Users\Public\Desktop\LocalBrandApp\StaticResources\bin\Debug\en\StaticResources.resources.dll
+C:\Users\Public\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.Resources.resources
+C:\Users\Public\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.Resources.en.resources
+C:\Users\Public\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.csproj.GenerateResource.cache
+C:\Users\Public\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.csproj.CoreCompileInputs.cache
+C:\Users\Public\Desktop\LocalBrandApp\StaticResources\obj\Debug\en\StaticResources.resources.dll
+C:\Users\Public\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.dll
+C:\Users\Public\Desktop\LocalBrandApp\StaticResources\obj\Debug\StaticResources.pdb

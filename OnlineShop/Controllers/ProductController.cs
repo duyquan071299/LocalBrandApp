@@ -1,14 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Model.Dao;
+using System.Xml.Linq;
+
 
 namespace OnlineShop.Controllers
 {
     public class ProductController : Controller
     {
+        [HttpGet]
+        public JsonResult ProductDetail(long id)
+        {
+            ProductDetailDao dao = new ProductDetailDao();
+            var product = dao.ViewDetail(id);
+            var images = product.MoreImages;
+
+            XElement xImages = XElement.Parse(images);
+            List<string> listImagesReturn = new List<string>();
+
+            foreach (XElement element in xImages.Elements())
+            {
+                listImagesReturn.Add(element.Value);
+            }
+            return Json(new
+            {
+                data = listImagesReturn
+            }, JsonRequestBehavior.AllowGet);
+
+        }
+
+        [HttpGet]
+        public JsonResult SizeDetail(int id)
+        {
+            SizeDetailDao dao = new SizeDetailDao();
+            var viewdetail = dao.ViewDetails(id);
+          
+
+           
+            List<string> listSizesReturn = new List<string>();
+
+            foreach (var element in viewdetail)
+            {
+                listSizesReturn.Add(element.Size);
+            }
+            return Json(new
+            {
+                data = listSizesReturn
+            }, JsonRequestBehavior.AllowGet);
+
+        }
+
+
         // GET: Product
         public ActionResult Index()
         {
@@ -82,6 +125,7 @@ namespace OnlineShop.Controllers
             ViewBag.Category = new ProductCategoryDao().ViewDetail(product.CategoryID.Value);
             ViewBag.RelatedProducts = new ProductDao().ListRelatedProducts(id);
             ViewBag.ProductDetails = new ProductDao().ListProductDetail(id);
+            //ViewBag.SizeDetails = new ProductDao().ListSizeDetail();
             return View(product);
         }
     }

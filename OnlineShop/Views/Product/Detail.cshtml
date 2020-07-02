@@ -1,193 +1,170 @@
 ﻿@model Model.EF.Product
+
 @{
     ViewBag.Title = "Detail";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+
     var category = (Model.EF.ProductCategory)ViewBag.Category;
     var relatedProducts = (List<Model.EF.Product>)ViewBag.RelatedProducts;
     var productDetails = (List<Model.EF.ProductDetail>)ViewBag.ProductDetails;
+    var sizeDetails = (List<Model.EF.SizeDetail>)ViewBag.SizeDetails;
+}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="~/assets/client/css/custom.css">
+
+@section jsFooter{
+    
 }
 
-@*@section jsFooter{
-    <script src="~/assets/admin/dist/js/jscolor.js"></script>
-    <script>
-        $('#btnSelectImage').on('click', function (e) {
 
-        })
+<div class="body">
+    <div class="image-slide">
+        <div class="modal-body">
+            <div id="imageList" class="img_load" style="padding-left: 50px"></div>
+            <input type="hidden" id="hidProductID" value="@productDetails[0].ID" />
+        </div>
+        
+    </div>
+
+    <div class="body-detail">
+        <div class="more_item">MORE ITEM</div>
+        <div class="code">CODE: NS23HN2569J</div>
+        <div class="productDetailName">@Model.Name</div> @*//BALENCIAGA SMALL LOGO TEE*@
+        <div class="decription">@Model.Description</div>@*Cocoon oversized cotton T-shirt*@
+        <div class="title_styledetail">Style detail</div>
+        <div class="text">@Html.Raw(Model.Detail)</div>@*Shaped into an oversized Cocoon silhouette, this white T-shirt from Balenciaga effortlessly taps into the brand's edgy aesthetic. It's been cut from lightweight and breathable cotton with ribbed finishing at the... collar, and is printed with the Parisian house's copyright logo for cool recognition. material: 100% cotton care instructions: hand wash Made in Portugal Designer colour name: White</div>*@
+        <div class="title_colors">
+            <p style="float: left">Colors:</p>
+            <div style=" padding-left: 20px; float: left">
+                @foreach (var item in productDetails)
+                {
+                    <div style=" height: 18px; padding-left: 80px;padding-top:15px; float: left">
+                        <button data-id="@item.ID" class="btn-images" style="background-color: @item.Color; width: 18px; height: 18px"></button>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div>
+
+            <label for="size" class="title_size">Size available: </label>
+            <div class="sizebox">
+                <select name="size" class="size" id="size">
+                </select>
+            </div>
+        </div>
+        @*<div class="title_price">$549.00</div>*@
+        @*<p>@Model.Description</p>*@
+
+        <div class="title_price">
+            $<span>@(Model.Price.HasValue ? Model.Price.Value.ToString("N0") : "Liên hệ")</span>.00
+        </div>
+        <div class="title_cart">
+            <button style="cursor: pointer; background-color: #E0C387; width: 208px; height: 49px; text-align: center" onclick="location.href='/them-gio-hang?productId='+@Model.ID+'&quantity=1'" type="button">Thêm vào giỏ</button>
+        </div>
+
+
+
+        @*<div class="share-desc">
+            <div class="share">
+                <p>Chia sẻ :</p>
+                <ul>
+                    <li><a href="#"><img src="images/facebook.png" alt="" /></a></li>
+                    <li><a href="#"><img src="images/twitter.png" alt="" /></a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="wish-list">
+            <ul>
+                <li class="wish"><a href="#">Thêm vào yêu thích</a></li>
+                <li class="compare"><a href="#">So sánh</a></li>
+            </ul>
+        </div>*@
+    </div>
+    <div class="clear"></div>
+
+    @*<div class="product_desc">
+        <div id="horizontalTab">
+            <ul class="resp-tabs-list">
+                <li>Chi tiết</li>
+                <div class="clear"></div>
+            </ul>
+            <div class="resp-tabs-container">
+                <div class="product-desc">
+                    @Html.Raw(Model.Detail)
+                </div>
+            </div>
+        </div>
+    </div>*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#horizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true   // 100% fit in a container
+            });
+        });
+
     </script>
-}*@
+    <script>
+        //Bắt sự kiện click cho phần tử có class .example1
+        $(".btn-images").click(function () {
 
-<div class="content">
-    <div class="content_top">
-        <div class="back-links">
-            <p><a href="/">Trang chủ</a> >>>> <a href="/san-pham/@category.MetaTitle-@category.ID">@category.Name</a></p>
+             @*var @size = $(this).data('id');
+             @foreach (var item in sizeDetails)
+             { 
+                    if (item.DetailID == @size)
+                        
+             }*@
+
+
+                  });
+    </script>
+
+    <script>
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "block";
+                dots[i].style.display = "block";
+                if (i != n) x[i].style.display = "none";
+            }
+        }
+    </script>
+    @*<div class="content_bottom">
+        <div class="heading">
+            <h3>Sản phẩm liên quan</h3>
+        </div>
+        <div class="see">
+            <p><a href="/san-pham">Xem tất cả</a></p>
         </div>
         <div class="clear"></div>
-    </div>
-    <div class="section group">
-        <div class="cont-desc span_1_of_2">
-            <div class="product-details">
-                <div class="grid images_3_of_2">
-                    <div id="container">
-                        <div id="products_example">
-                            <div id="products">
-                                <div class="slides_container">
-                                    <a href="#" target="_blank"><img src="@Model.Image" alt=" " /></a>
-                                </div>
-                                @*<ul class="pagination">
-                                        <li><a href="#"><img src="images/thumbnailslide-1.jpg" alt=" " /></a></li>
-                                        <li><a href="#"><img src="images/thumbnailslide-2.jpg" alt=" " /></a></li>
-                                        <li><a href="#"><img src="images/thumbnailslide-3.jpg" alt=" " /></a></li>
-                                        <li><a href="#"><img src="images/thumbnailslide-4.jpg" alt=" " /></a></li>
-                                        <li><a href="#"><img src="images/thumbnailslide-5.jpg" alt=" " /></a></li>
-                                        <li><a href="#"><img src="images/thumbnailslide-6.jpg" alt=" " /></a></li>
-                                    </ul>*@
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="desc span_3_of_2">
-                    <h2>@Model.Name </h2>
-                    <p>@Model.Description</p>
-                    <div style="float: left"><p>Màu: </p> </div>
-                    @foreach (var item in productDetails)
-                    {
-
-                        <div style="float: left">
-                            <button style="background-color: #@item.Color">' '</button>
-                        </div>
-
-
-
-
-
-
-
-
-
-                    }
-                    <div class="price">
-                        <p>Giá: <span>@(Model.Price.HasValue ? Model.Price.Value.ToString("N0") : "Liên hệ")</span></p>
-                    </div>
-                    <div class="add-cart">
-                        <h4><a href="/them-gio-hang?productId=@Model.ID&quantity=1">Thêm vào giỏ</a></h4>
-                    </div>
-                    <div class="share-desc">
-                        <div class="share">
-                            <p>Chia sẻ :</p>
-                            <ul>
-                                <li><a href="#"><img src="images/facebook.png" alt="" /></a></li>
-                                <li><a href="#"><img src="images/twitter.png" alt="" /></a></li>
-                            </ul>
-                        </div>
-
-
-                        <div class="clear"></div>
-                    </div>
-                    <div class="wish-list">
-                        <ul>
-                            <li class="wish"><a href="#">Thêm vào yêu thích</a></li>
-                            <li class="compare"><a href="#">So sánh</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="clear"></div>
-
-                <div class="product_desc">
-                    <div id="horizontalTab">
-                        <ul class="resp-tabs-list">
-                            <li>Chi tiết</li>
-
-                            <div class="clear"></div>
-                        </ul>
-                        <div class="resp-tabs-container">
-                            <div class="product-desc">
-                                @Html.Raw(Model.Detail)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <script type="text/javascript">
-                    $(document).ready(function () {
-                        $('#horizontalTab').easyResponsiveTabs({
-                            type: 'default', //Types: default, vertical, accordion
-                            width: 'auto', //auto or any width like 600px
-                            fit: true   // 100% fit in a container
-                        });
-                    });
-                </script>
-                <div class="content_bottom">
-                    <div class="heading">
-                        <h3>Sản phẩm liên quan</h3>
-                    </div>
-                    <div class="see">
-                        <p><a href="/san-pham">Xem tất cả</a></p>
+    </div>*@
+    @*<div class="section group">
+        @foreach (var item in relatedProducts)
+        {
+            var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+            <div class="grid_1_of_4 images_1_of_4">
+                <a href="@url"><img src="@item.Image" alt=""></a>
+                <div class="price" style="border:none">
+                    <div class="add-cart" style="float:none">
+                        <h4><a href="@url">Add to Cart</a></h4>
                     </div>
                     <div class="clear"></div>
                 </div>
-                <div class="section group">
-                    @foreach (var item in relatedProducts)
-                    {
-                        var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
-                        <div class="grid_1_of_4 images_1_of_4">
-                            <a href="@url"><img src="@item.Image" alt=""></a>
-                            <div class="price" style="border:none">
-                                <div class="add-cart" style="float:none">
-                                    <h4><a href="@url">Add to Cart</a></h4>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    }
+            </div>
+        }
 
-                </div>
-            </div>
-            <div class="rightsidebar span_3_of_1">
-                @{ Html.RenderAction("ProductCategory", "Product");}
-                <div class="subscribe">
-                    <h2>Newsletters Signup</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.......</p>
-                    <div class="signup">
-                        <form>
-                            <input type="text" value="E-mail address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';"><input type="submit" value="Sign up">
-                        </form>
-                    </div>
-                </div>
-                <div class="community-poll">
-                    <h2>Community POll</h2>
-                    <p>What is the main reason for you to purchase products online?</p>
-                    <div class="poll">
-                        <form>
-                            <ul>
-                                <li>
-                                    <input type="radio" name="vote" class="radio" value="1">
-                                    <span class="label"><label>More convenient shipping and delivery </label></span>
-                                </li>
-                                <li>
-                                    <input type="radio" name="vote" class="radio" value="2">
-                                    <span class="label"><label for="vote_2">Lower price</label></span>
-                                </li>
-                                <li>
-                                    <input type="radio" name="vote" class="radio" value="3">
-                                    <span class="label"><label for="vote_3">Bigger choice</label></span>
-                                </li>
-                                <li>
-                                    <input type="radio" name="vote" class="radio" value="5">
-                                    <span class="label"><label for="vote_5">Payments security </label></span>
-                                </li>
-                                <li>
-                                    <input type="radio" name="vote" class="radio" value="6">
-                                    <span class="label"><label for="vote_6">30-day Money Back Guarantee </label></span>
-                                </li>
-                                <li>
-                                    <input type="radio" name="vote" class="radio" value="7">
-                                    <span class="label"><label for="vote_7">Other.</label></span>
-                                </li>
-                            </ul>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div>*@
+
+
+    <script src="~/assets/client/js/jquery-1.11.3.min.js"></script>
+    <script src="~/assets/client/js/jquery-ui.js"></script>
+    <script src="~/assets/client/js/controller/productDetailController.js"></script>
 </div>
-

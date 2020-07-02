@@ -55,10 +55,10 @@ namespace OnlineShop.Areas.Admin.Controllers
             var listImages = serializer.Deserialize<List<string>>(images);
 
             XElement xElement = new XElement("Images");
-
+             
             foreach (var item in listImages)
             {
-                var subStringItem = item.Substring(22);
+                var subStringItem = item.Substring(21);
                 xElement.Add(new XElement("Image", subStringItem));
             }
             ProductDetailDao dao = new ProductDetailDao();
@@ -124,7 +124,7 @@ namespace OnlineShop.Areas.Admin.Controllers
 
                 foreach (var item in listImages)
                 {
-                    var subStringItem = item.Substring(22);
+                    var subStringItem = item.Substring(21);
                     xElement.Add(new XElement("Image", subStringItem));
                 }
                 product.MoreImages = xElement.ToString();

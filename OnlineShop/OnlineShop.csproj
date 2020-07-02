@@ -1206,6 +1206,7 @@
     <Content Include="assets\client\css\bootstrap-theme.min.css" />
     <Content Include="assets\client\css\bootstrap.css" />
     <Content Include="assets\client\css\bootstrap.min.css" />
+    <Content Include="assets\client\css\custom.css" />
     <Content Include="assets\client\css\font-awesome.min.css" />
     <Content Include="assets\client\css\jquery-ui.css" />
     <Content Include="assets\client\data\Provinces_Data.xml" />
@@ -1213,6 +1214,7 @@
     <Content Include="assets\client\font\glyphicons-halflings-regular.svg" />
     <Content Include="assets\client\images\facebook.png" />
     <Content Include="assets\client\js\bootstrap.min.js" />
+    <Content Include="assets\client\js\controller\productDetailController.js" />
     <Content Include="assets\client\js\controller\baseController.js" />
     <Content Include="assets\client\js\controller\cartController.js" />
     <Content Include="assets\client\js\controller\contactController.js" />
@@ -1384,7 +1386,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>63277</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:63277/</IISUrl>
+          <IISUrl>http://localhost:5001/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:5001/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

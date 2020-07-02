@@ -1,0 +1,146 @@
+﻿.body {
+    width: 1920px;
+    height: 1437px;
+}
+
+.image-slide {
+    margin-top: 120px;
+    margin-left: 179px;
+    width: 615px;
+    height: 695px;
+    background: transparent; /*url('https://shonmott.com/wp-content/uploads/2020/02/0833_03_9729-1-800x1200.jpg') 0% 0% no-repeat padding-box;*/
+    opacity: 1;
+    float: left;
+}
+
+.body-detail {
+    margin-top: 0px;
+    padding-top: 130px;
+    margin-left: 858px;
+}
+
+.more_item {
+    width: 107px;
+    height: 19px;
+    text-align: left;
+    font: SemiBold 16px/19px Montserrat;
+    letter-spacing: 1.28px;
+    color: #383838;
+    opacity: 1;
+}
+
+.code {
+    margin-top: 40px;
+    width: 250px;
+    height: 18px;
+    text-align: left;
+    font: Medium 14px/18px Montserrat;
+    letter-spacing: 1.12px;
+    font-size: 14px;
+    color: #A0A0A0;
+    opacity: 1;
+}
+
+.productDetailName {
+    margin-top: 5px;
+    width: 325px;
+    height: 24px;
+    text-align: left;
+    font: SemiBold 20px/25px Montserrat;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #383838;
+    opacity: 1;
+}
+
+.decription {
+    margin-top: 3px;
+    width: 333px;
+    height: 22px;
+    text-align: left;
+    font: Regular 18px/25px Montserrat;
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+}
+
+.title_styledetail {
+    margin-top: 30px;
+    width: 153px;
+    height: 22px;
+    text-align: left;
+    font: SemiBold 18px/25px Montserrat;
+    letter-spacing: 0px;
+    color: #383838;
+    opacity: 1;
+}
+
+.text {
+    padding-top: 8px;
+
+    width: 434px;
+    height: 126px;
+    text-align: left;
+    font: Regular 16px/32px Montserrat;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+}
+
+.title_colors {
+    padding-top: 80px;
+    padding-bottom: 70px;
+    width: 403px;
+    height: 52px;
+    text-align: left;
+    font: SemiBold 18px/25px Montserrat;
+    letter-spacing: 0px;
+    color: #383838;
+    opacity: 1;
+}
+
+.title_size {   
+    width: 170px;
+    height: 10px;
+    float: left;
+}
+
+
+.size {
+    width: 130px;
+    height: 30px;
+    text-align: left;
+    font: SemiBold 18px/25px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.title_price {
+    padding-top: 60px;
+    width: 103px;
+    height: 52px;
+    text-align: left;
+    font: SemiBold 18px/25px Montserrat;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #383838;
+    opacity: 1;
+    float: left;
+}
+
+.title_cart {
+    padding-top: 50px;
+    padding-left: 150px;
+    width: 103px;
+    height: 52px;
+
+}
+.sizebox {
+    margin-left: 25px;
+
+}
+
+

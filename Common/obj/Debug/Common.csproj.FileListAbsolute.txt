@@ -21,3 +21,8 @@ C:\Users\thien\Desktop\LocalBrandApp\Common\obj\Debug\Common.csprojAssemblyRefer
 C:\Users\thien\Desktop\LocalBrandApp\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\thien\Desktop\LocalBrandApp\Common\obj\Debug\Common.dll
 C:\Users\thien\Desktop\LocalBrandApp\Common\obj\Debug\Common.pdb
+C:\Users\Public\Desktop\LocalBrandApp\Common\bin\Debug\Common.dll
+C:\Users\Public\Desktop\LocalBrandApp\Common\bin\Debug\Common.pdb
+C:\Users\Public\Desktop\LocalBrandApp\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Public\Desktop\LocalBrandApp\Common\obj\Debug\Common.dll
+C:\Users\Public\Desktop\LocalBrandApp\Common\obj\Debug\Common.pdb
